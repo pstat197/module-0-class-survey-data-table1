@@ -1,4 +1,3 @@
----
 title: "Analysis of class surveys"
 subtitle: "Table 1"
 author: "Katie, Priyanka, Naira, Alex, Kaeya, Taneesha"
@@ -12,7 +11,7 @@ execute:
   warning: false
   echo: false
   cache: true
----
+
 
 Use this as a template. Keep the headers and remove all other text. Overall, your report may be quite short. When it is complete, render and then push changes to your team repository.
 
@@ -31,17 +30,11 @@ Write a brief description of the dataset. Your description should cover how data
 
 ## Questions of interest
 
--   **is there a strong correlation between non industry project with any other variable? (Alex + Priyanka)**
+We sought to understand the relationship between coursework and a student's proficiency/curiosity. Our analysis addressed three questions:
 
--   
-
--   **cs 9 vs cs 16: vs self rated proficiency level in coding  (Kaeya + Taneesha)**
-
-    -   Separate cs9 and cs 16
-
-    -   
-
--   **People who have domain specialization do they have more domains of interests. - Katie and Naira**
+1.  Does there exists a relationship between student's preference for non-industry projects and any other variables.
+2.  Does taking CMPSC 9 (**Intermediate Python Programming**) versus CMPSC 16 (**Problem Solving with Computers I**) has any relation to self rated proficiency level in coding?
+3.  Do people who have done research have more or less domains of interest compared to people who have not done research?
 
 ## Findings
 
