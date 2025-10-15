@@ -1,3 +1,4 @@
+---
 title: "Analysis of class surveys"
 subtitle: "Table 1"
 author: "Katie, Priyanka, Naira, Alex, Kaeya, Taneesha"
@@ -11,7 +12,7 @@ execute:
   warning: false
   echo: false
   cache: true
-
+---
 
 Use this as a template. Keep the headers and remove all other text. Overall, your report may be quite short. When it is complete, render and then push changes to your team repository.
 
