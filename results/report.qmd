@@ -1,7 +1,6 @@
----
 title: "Analysis of class surveys"
-subtitle: "By Table 1"
-author: "Naira, Alex, Taneesha, Kaeya, Priyanka, Katie"
+subtitle: "Table 1"
+author: "Katie, Priyanka, Naira, Alex, Kaeya, Taneesha"
 date: last-modified
 published-title: "Updated"
 editor: visual
@@ -12,7 +11,7 @@ execute:
   warning: false
   echo: false
   cache: true
----
+
 
 Use this as a template. Keep the headers and remove all other text. Overall, your report may be quite short. When it is complete, render and then push changes to your team repository.
 
