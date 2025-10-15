@@ -27,7 +27,7 @@ Write a one-paragraph abstract summarizing what you did and your findings. It ne
 
 ## Data description
 
-Write a brief description of the dataset. Your description should cover how data were obtained, sample characteristics, and measurements taken. It does not need to be exhaustive, but sufficiently detailed to convey a clear high-level understanding of the dataset. You can utilize bullet points or tables if you feel it would help improve clarity.
+The dataset was obtained from a survey that all 2025 Fall Quarter PSTAT 197A students completed. Personal identifying information was removed to ensure anonymity. Students were asked about classes they took, whether they have done research, what year they were, what preference for projects they have, etc. Students were informed that this data would be used by the class, and had the option to opt out of being in the dataset.
 
 ## Questions of interest
 
