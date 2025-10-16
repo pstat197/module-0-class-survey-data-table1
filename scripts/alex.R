@@ -21,6 +21,43 @@ tbl <- table(merged_data$prog.prof,
              merged_data$do_you_have_any_preference_regarding_working_on_an_industry_project_or_a_research_lab_project)
 chisq.test(tbl)
 
+fisher.test(tbl)
+
 tbl <- table(merged_data$math.prof,
              merged_data$do_you_have_any_preference_regarding_working_on_an_industry_project_or_a_research_lab_project)
 chisq.test(tbl)
+
+fisher.test(tbl)
+
+
+#testing for all variables 
+
+target <- "do_you_have_any_preference_regarding_working_on_an_industry_project_or_a_research_lab_project"
+
+results <- data.frame(variable = character(),
+                      p_value = numeric(),
+                      stringsAsFactors = FALSE)
+
+for (var in names(merged_data)) {
+  if (var != target && !is.numeric(merged_data[[var]])) {
+    tbl <- table(merged_data[[var]], merged_data[[target]])
+    if (all(dim(tbl) > 1)) {    
+      test <- suppressWarnings(chisq.test(tbl))
+      if (any(test$expected < 5)) test <- fisher.test(tbl)
+      results <- rbind(results, data.frame(variable = var,
+                                           p_value = test$p.value))
+    }
+  }
+}
+
+#print results. sorted by significance
+results <- results[order(results$p_value), ]
+print(results)
+
+#shows only ones with pvalue < 0.05
+subset(results, p_value < 0.05)
+
+#this is to see what language actually prefers research lab project
+tbl <- table(merged_data$lang,
+             merged_data$do_you_have_any_preference_regarding_working_on_an_industry_project_or_a_research_lab_project)
+prop.table(tbl, margin = 1)
