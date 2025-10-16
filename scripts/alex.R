@@ -8,26 +8,8 @@ merged_data$do_you_have_any_preference_regarding_working_on_an_industry_project_
   ifelse(merged_data$do_you_have_any_preference_regarding_working_on_an_industry_project_or_a_research_lab_project %in%
            c("No preference", "I'm more interested in a research lab project"),
          1, 0)
-merged_data
 merged_data$do_you_have_any_preference_regarding_working_on_an_industry_project_or_a_research_lab_project <-
   as.numeric(merged_data$do_you_have_any_preference_regarding_working_on_an_industry_project_or_a_research_lab_project)
-
-head(merged_data)
-
-str(merged_data)
-
-
-tbl <- table(merged_data$prog.prof,
-             merged_data$do_you_have_any_preference_regarding_working_on_an_industry_project_or_a_research_lab_project)
-chisq.test(tbl)
-
-fisher.test(tbl)
-
-tbl <- table(merged_data$math.prof,
-             merged_data$do_you_have_any_preference_regarding_working_on_an_industry_project_or_a_research_lab_project)
-chisq.test(tbl)
-
-fisher.test(tbl)
 
 
 #testing for all variables 
@@ -52,12 +34,20 @@ for (var in names(merged_data)) {
 
 #print results. sorted by significance
 results <- results[order(results$p_value), ]
+
+cat("\n=== All Variables Tested (sorted by p-value) ===\n")
 print(results)
 
 #shows only ones with pvalue < 0.05
-subset(results, p_value < 0.05)
+cat("\n=== Significant Associations (p < 0.05) ===\n")
+print(subset(results, p_value < 0.05))
 
 #this is to see what language actually prefers research lab project
-tbl <- table(merged_data$lang,
-             merged_data$do_you_have_any_preference_regarding_working_on_an_industry_project_or_a_research_lab_project)
-prop.table(tbl, margin = 1)
+cat("\n=== Preference distribution by programming language ===\n")
+tbl <- table(
+  merged_data$lang,
+  merged_data$do_you_have_any_preference_regarding_working_on_an_industry_project_or_a_research_lab_project
+)
+print(prop.table(tbl, margin = 1))
+
+
