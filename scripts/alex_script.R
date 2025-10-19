@@ -50,4 +50,8 @@ tbl <- table(
 )
 print(prop.table(tbl, margin = 1))
 
-
+tbl <- table(merged_data$updv.num,
+             merged_data$do_you_have_any_preference_regarding_working_on_an_industry_project_or_a_research_lab_project)
+chisq.test(tbl)
+cat("\n=== Preference distribution by amount Upper Division classes ===\n")
+prop.table(tbl, margin = 1)
