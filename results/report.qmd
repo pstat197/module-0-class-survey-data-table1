@@ -27,21 +27,15 @@ Write a one-paragraph abstract summarizing what you did and your findings. It ne
 
 ## Data description
 
-Write a brief description of the dataset. Your description should cover how data were obtained, sample characteristics, and measurements taken. It does not need to be exhaustive, but sufficiently detailed to convey a clear high-level understanding of the dataset. You can utilize bullet points or tables if you feel it would help improve clarity.
+The dataset was obtained from a survey that all 2025 Fall Quarter PSTAT 197A students completed. Personal identifying information was removed to ensure anonymity. Students were asked about classes they took, whether they have done research, what year they were, what preference for projects they have, etc. Students were informed that this data would be used by the class, and had the option to opt out of being in the dataset.
 
 ## Questions of interest
 
--   **is there a strong correlation between non industry project with any other variable? (Alex + Priyanka)**
+We sought to understand the relationship between coursework and a student's proficiency/curiosity. Our analysis addressed three questions:
 
--   
-
--   **cs 9 vs cs 16: vs self rated proficiency level in coding  (Kaeya + Taneesha)**
-
-    -   Separate cs9 and cs 16
-
-    -   
-
--   **People who have domain specialization do they have more domains of interests. - Katie and Naira**
+1.  Does there exists a relationship between student's preference for non-industry projects and any other variables.
+2.  Does taking CMPSC 9 (**Intermediate Python Programming**) versus CMPSC 16 (**Problem Solving with Computers I**) has any relation to self rated proficiency level in coding?
+3.  Do people who have done research have more or less domains of interest compared to people who have not done research?
 
 ## Findings
 
