@@ -32,9 +32,37 @@ The dataset was obtained from a survey that all 2025 Fall Quarter PSTAT 197A stu
 We sought to understand the relationship between coursework and a student's proficiency/curiosity. Our analysis addressed three questions:
 
 1.  Does there exists a relationship between student's preference for non-industry projects and any other variables.
-2.  Does taking CMPSC 9 (**Intermediate Python Programming**) versus CMPSC 16 (**Problem Solving with Computers I**) has any relation to self rated proficiency level in coding?
+2.  Does taking CMPSC 9 (**Intermediate Python Programming**) or CMPSC 16 (**Problem Solving with Computers I**) have any relation to self rated proficiency level in coding?
 3.  Do people who have done research have more or less domains of interest compared to people who have not done research?
 
 ## Findings
 
 Summarize your results. Don't try to explain every step you took; focus instead on providing the main data analytic outputs -- tables and figures -- and explaining clearly what they show. Clarify any important decisions you made in obtaining them. You can display codes if you like but it is not necessary.
+
+Question 2: Does taking CMPSC 9 (**Intermediate Python Programming**) or CMPSC 16 (**Problem Solving with Computers I**) have any relation to self rated proficiency or comfort ability level in coding?
+
+To analyze this question, we divided it into different parts. We compared each course (CMPSC 16 and CMPSC 9) individually in relation to self rated programming proficiency in comfort levels. This resulted in the creation of 4 distinct datasets, each including a binary variable displaying whether the class was taken (0=not taken, 1=taken) and another including the self rated proficency or comfort level. Proficiency was originally on a character scale of beginning, intermediate, and advanced, which we then converted to the numeric scale of 1, 2, and 3. Comfort level was a scale of 1 to 5, 1 being the least comfortable and 5 being the most.
+
+For each dataset we found the correlation between the course taken and proficiency/comfort. We also performed a chi-squared test, as we were finding the relationship between categorical variables. The results are summarized below below:
+
+-   Dataset 1: CMPSC 16, prog.prof
+
+    -   Correlation coefficient: .19
+
+    -   P-Value of Chi-Squared Test: .34
+
+    -   ![]()![](report_files/figure-html/progprofcs16.png){width="312"}![]()
+
+-   Dataset 2: CMPSC 9, prog.prof
+
+    -   Correlation coefficient: .05
+
+    -   P-Value of Chi-Squared Test: .69
+
+    -   ![](report_files/figure-html/progprofcs9.png){width="306"}
+
+-   Dataset 3: CMPSC 16, prog.comf
+
+-   Dataset 4: CMPSC 9, prog.comf
+
+From our tests, we found no significant relationship between self rated programming proficiency and whether each course was taken or not. Both classes have very weak positive correlations with proficiency, and their p-values \> .05 indicated that the relationship is not significant.
