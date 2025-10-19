@@ -21,7 +21,7 @@ library(tidyverse)
 
 ## Executive summary
 
-Write a one-paragraph abstract summarizing what you did and your findings. It need not be comprehensive; try to highlight the most important or interesting outcomes.
+We took the data from the PSTAT 197A capstone survey and sought to find if there were any correlations and connections in the data that may help us better understand the students taking the capstone. We used R to do our data analysis and came up with guiding questions that directed our research. Our findings are summarized in this document.
 
 ## Data description
 
