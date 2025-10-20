@@ -31,13 +31,43 @@ The dataset was obtained from a survey that all 2025 Fall Quarter PSTAT 197A stu
 
 We sought to understand the relationship between coursework and a student's proficiency/curiosity. Our analysis addressed three questions:
 
-1.  Does there exists a relationship between student's preference for non-industry projects and any other variables.
+1.  Is there a relationship between any variable and a student's neutrality or preference for a research project?
 2.  Does taking CMPSC 9 (**Intermediate Python Programming**) or CMPSC 16 (**Problem Solving with Computers I**) have any relation to self rated proficiency level in coding?
 3.  Do people who have done research have more or less domains of interest compared to people who have not done research?
 
 ## Findings
 
 Summarize your results. Don't try to explain every step you took; focus instead on providing the main data analytic outputs -- tables and figures -- and explaining clearly what they show. Clarify any important decisions you made in obtaining them. You can display codes if you like but it is not necessary.
+
+Question 1: Is there a relationship between a student's neutrality or preference for a research project?
+
+To answer this question, we merged the two separate datasets of background and interest attributes. Our target variable was `projtype`, from the background dataset. We re encoded it into a binary response of 0 indicating an industry preference, and 1, indicating no preference or a preference for research.
+
+Since we were dealing with categorical variables, we created contingency table for each variable that compares its responses with the target variable. Then, a Chi-squared test is ran to check for significant association. For counts less than five, a Fisher's exact test was used.
+
+Finally, we printed the subset of variables that had a p-value of \< 0.05 (which indicated a significant association with a preference for research vs industry). This is the table we acquired:
+
+![](images/Screenshot 2025-10-19 at 3.57.11 PM.png)
+
+The `type` variable from the interest dataset was not available in the metadata, with the target variable projtype being the only seemingly related one. type originated from the interest dataset, and had responses of "both, ind and lab". These seemingly correspond to the responses for `projtype`, so we believed it was fair to assume that `type` is a duplicate variable of `projtype`. Thus, we proceeded by analyzing the variables `updv.num` and `lang`.
+
+The more significant of the two was `updv.num` (which corresponds to the amount of upper division PSTAT classes students have taken). We created another frequency table in order to see which responses to the number of upper division classes taken question corresponded to a preference/indifference towards research.
+
+![](images/Screenshot 2025-10-19 at 4.26.33 PM.png)
+
+![](images/PNG image.png){width="488"}
+
+These results must also be considered with the frequency of each response for `updv.num`, displayed in the table below:
+
+![](images/Screenshot 2025-10-19 at 4.36.36 PM.png){width="636"}
+
+Due to largely varying sample sizes above, It's difficult to draw conclusions by examining the frequency table/bar chart for classes taken and research preference.
+
+The second most significant variable was `lang` (corresponding to which programming language the student prefers). We created another frequency table in order to see which responses to the preffered languages question corresponded to a preference for research or not.
+
+![](images/Screenshot 2025-10-19 at 4.57.50 PM.png){width="794"}
+
+`lang` had slightly more uniform sample sizes, allowing us to ultimately conclude that students who prefer R prefer/are indifferent to research projects.
 
 Question 2: Does taking CMPSC 9 (**Intermediate Python Programming**) or CMPSC 16 (**Problem Solving with Computers I**) have any relation to self rated proficiency or comfort ability level in coding?
 
