@@ -89,10 +89,22 @@ For each dataset we found the correlation between the course taken and proficien
 
     -   P-Value of Chi-Squared Test: .69
 
-    -   ![](report_files/figure-html/progprofcs9.png)
+    -   ![](report_files/figure-html/cs9-comfplot.png)
 
 -   Dataset 3: CMPSC 16, prog.comf
 
--   Dataset 4: CMPSC 9, prog.comf
+    -   Correlation coefficient: 0.37
 
-From our tests, we found no significant relationship between self rated programming proficiency and whether each course was taken or not. Both classes have very weak positive correlations with proficiency, and their p-values \> .05 indicated that the relationship is not significant.
+    -   P-Value of Chi-Squared Test: .0.99
+
+    -   ![](report_files/figure-html/cs16-comfplot.png)
+
+-   Dataset 4: CMPSC 9, prog.comf
+    
+    -   Correlation coefficient: -0.17
+
+    -   P-Value of Chi-Squared Test: .99
+
+    -   ![](report_files/figure-html/progprofcs16.png)
+
+From our tests, we found no significant relationship between self rated programming proficiency and whether each course was taken or not. Both classes have very weak positive correlations with proficiency, and their p-values \> .05 indicated that the relationship is not significant. Additionally, both courses show weak correlations with self-rated programming comfort; CMPSC 16 exhibits a small positive relationship, while CMPSC 9 shows a slight negative relationship. However, all p-values exceed 0.05, indicating that none of these associations are statistically significant. In summary, there is no meaningful evidence that taking CMPSC 9 or CMPSC 16 has a significant impact on students’ self-rated programming proficiency or comfort level.
