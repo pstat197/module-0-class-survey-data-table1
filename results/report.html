@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Katie, Priyanka, Naira, Alex, Kaeya, Taneesha">
-<meta name="dcterms.date" content="2025-10-18">
+<meta name="dcterms.date" content="2025-10-19">
 
 <title>Analysis of class surveys</title>
 <style>
@@ -21,40 +21,6 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -99,7 +65,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Updated</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">October 18, 2025</p>
+      <p class="date">October 19, 2025</p>
     </div>
   </div>
   
@@ -121,81 +87,149 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="questions-of-interest">Questions of interest</h2>
 <p>We sought to understand the relationship between coursework and a student’s proficiency/curiosity. Our analysis addressed three questions:</p>
 <ol type="1">
-<li>Does there exists a relationship between student’s preference for non-industry projects and any other variables.</li>
-<li>Does taking CMPSC 9 (<strong>Intermediate Python Programming</strong>) versus CMPSC 16 (<strong>Problem Solving with Computers I</strong>) has any relation to self rated proficiency level in coding?</li>
+<li>Is there a relationship between any variable and a student’s neutrality or preference for a research project?</li>
+<li>Does taking CMPSC 9 (<strong>Intermediate Python Programming</strong>) or CMPSC 16 (<strong>Problem Solving with Computers I</strong>) have any relation to self rated proficiency level in coding?</li>
 <li>Do people who have done research have more or less domains of interest compared to people who have not done research?</li>
 </ol>
 </section>
 <section id="findings" class="level2">
 <h2 class="anchored" data-anchor-id="findings">Findings</h2>
-<p>Summarize your results. Don’t try to explain every step you took; focus instead on providing the main data analytic outputs – tables and figures – and explaining clearly what they show. Clarify any important decisions you made in obtaining them. You can display codes if you like but it is not necessary.</p>
-</section>
-<section id="useful-tips-remove-this-section" class="level2">
-<h2 class="anchored" data-anchor-id="useful-tips-remove-this-section">Useful tips (remove this section)</h2>
-<p>Due to the visual editor, most common needs for authoring can be met using menu items in the RStudio IDE. For a comprehensive guide to Quarto, see the <a href="https://quarto.org/docs/guide/">documentation</a>; consult the documentation for anything you can’t sort out in the IDE.</p>
-<section id="code-chunks" class="level3">
-<h3 class="anchored" data-anchor-id="code-chunks">Code chunks</h3>
-<p>Insert code chunks using the <em>Insert</em> drop-down menu or <code>ctrl + alt + I</code> . By default in this document, codes will not be shown but results will. If you want to change this behavior, add the chunk option <code>echo: true</code> as below.</p>
-<div class="cell" data-hash="report_cache/html/unnamed-chunk-2_3c4eb0cc9909a7c1a19ce56c3de2a3d7">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>my_df <span class="ot">&lt;-</span> <span class="fu">tibble</span>(<span class="at">animal =</span> <span class="fu">c</span>(<span class="st">'snake'</span>, <span class="st">'gecko'</span>),</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>                <span class="at">threatening =</span> <span class="fu">c</span>(<span class="cn">TRUE</span>, <span class="cn">FALSE</span>))</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>my_df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 2 × 2
-  animal threatening
-  &lt;chr&gt;  &lt;lgl&gt;      
-1 snake  TRUE       
-2 gecko  FALSE      </code></pre>
-</div>
-</div>
-<p>Code chunks will be executed in order when the document is rendered, so packages should be loaded at the very beginning of the document</p>
-</section>
-<section id="rendering-tables-in-markdown" class="level3">
-<h3 class="anchored" data-anchor-id="rendering-tables-in-markdown">Rendering tables in markdown</h3>
-<p>Several functions exist for converting dataframes to markdown tables for nice display. A simple one from the <code>knitr</code> package is <code>knitr::kable()</code> .</p>
-<div class="cell" data-hash="report_cache/html/unnamed-chunk-3_ba7196d961288bb877c4e37fd97e79ea">
+<p>Question 1: Is there a relationship between a student’s neutrality or preference for a research project?</p>
+<p>To answer this question, we merged the two separate datasets of background and interest attributes. Our target variable was <code>projtype</code>, from the background dataset. We re encoded it into a binary response of 0 indicating an industry preference, and 1, indicating no preference or a preference for research.</p>
+<p>Since we were dealing with categorical variables, we created contingency table for each variable that compares its responses with the target variable. Then, a Chi-squared test is ran to check for significant association. For counts less than five, a Fisher’s exact test was used.</p>
+<p>Finally, we printed the subset of variables that had a p-value of &lt; 0.05 (which indicated a significant association with a preference for research vs industry). This is the table we acquired:</p>
+<p><img src="images/q1pval.png" class="img-fluid"></p>
+<p>The <code>type</code> variable from the interest dataset was not available in the metadata, with the target variable projtype being the only seemingly related one. type originated from the interest dataset, and had responses of “both, ind and lab”. These seemingly correspond to the responses for <code>projtype</code>, so we believed it was fair to assume that <code>type</code> is a duplicate variable of <code>projtype</code>. Thus, we proceeded by analyzing the variables <code>updv.num</code> and <code>lang</code>.</p>
+<p>The more significant of the two was <code>updv.num</code> (which corresponds to the amount of upper division PSTAT classes students have taken). We created another frequency table in order to see which responses to the number of upper division classes taken question corresponded to a preference/indifference towards research.</p>
+<p><img src="images/updivfreq.png" class="img-fluid"></p>
+<p><img src="images/PNG%20image.png" class="img-fluid" width="488"></p>
+<p>These results must also be considered with the frequency of each response for <code>updv.num</code>, displayed in the table below:</p>
+<p><img src="images/numupdiv.png" class="img-fluid"></p>
+<p>Due to largely varying sample sizes above, It’s difficult to draw conclusions by examining the frequency table/bar chart for classes taken and research preference.</p>
+<p>The second most significant variable was <code>lang</code> (corresponding to which programming language the student prefers). We created another frequency table in order to see which responses to the preffered languages question corresponded to a preference for research or not.</p>
+<p><img src="images/langfreq.png" class="img-fluid"></p>
+<p><code>lang</code> had slightly more uniform sample sizes, allowing us to ultimately conclude that students who prefer R prefer/are indifferent to research projects.</p>
+<p>Question 2: Does taking CMPSC 9 (<strong>Intermediate Python Programming</strong>) or CMPSC 16 (<strong>Problem Solving with Computers I</strong>) have any relation to self rated proficiency or comfort ability level in coding?</p>
+<p>To analyze this question, we divided it into different parts. We compared each course (CMPSC 16 and CMPSC 9) individually in relation to self rated programming proficiency in comfort levels. This resulted in the creation of 4 distinct datasets, each including a binary variable displaying whether the class was taken (0=not taken, 1=taken) and another including the self rated proficency or comfort level. Proficiency was originally on a character scale of beginning, intermediate, and advanced, which we then converted to the numeric scale of 1, 2, and 3. Comfort level was a scale of 1 to 5, 1 being the least comfortable and 5 being the most.</p>
+<p>For each dataset we found the correlation between the course taken and proficiency/comfort. We also performed a chi-squared test, as we were finding the relationship between categorical variables. The results are summarized below below:</p>
+<ul>
+<li><p>Dataset 1: CMPSC 16, prog.prof</p>
+<ul>
+<li><p>Correlation coefficient: .19</p></li>
+<li><p>P-Value of Chi-Squared Test: .34</p></li>
+<li><p><img src=".png" class="img-fluid"><img src="report_files/figure-html/progprofcs16.png" class="img-fluid"><img src=".png" class="img-fluid"></p></li>
+</ul></li>
+<li><p>Dataset 2: CMPSC 9, prog.prof</p>
+<ul>
+<li><p>Correlation coefficient: .05</p></li>
+<li><p>P-Value of Chi-Squared Test: .69</p></li>
+<li><p><img src="report_files/figure-html/progprofcs9.png" class="img-fluid"></p></li>
+</ul></li>
+<li><p>Dataset 3: CMPSC 16, prog.comf</p>
+<ul>
+<li><p>Correlation coefficient: 0.37</p></li>
+<li><p>P-Value of Chi-Squared Test: .0.99</p></li>
+<li><p><img src="report_files/figure-html/cs16-comfplot.png" class="img-fluid"></p></li>
+</ul></li>
+<li><p>Dataset 4: CMPSC 9, prog.comf</p>
+<ul>
+<li><p>Correlation coefficient: -0.17</p></li>
+<li><p>P-Value of Chi-Squared Test: .99</p></li>
+<li><p><img src="report_files/figure-html/cs9-comfplot.png" class="img-fluid"></p></li>
+</ul></li>
+</ul>
+<p>From our tests, we found no significant relationship between self rated programming proficiency and whether each course was taken or not. Both classes have very weak positive correlations with proficiency, and their p-values &gt; .05 indicated that the relationship is not significant. Additionally, both courses show weak correlations with self-rated programming comfort; CMPSC 16 exhibits a small positive relationship, while CMPSC 9 shows a slight negative relationship. However, all p-values exceed 0.05, indicating that none of these associations are statistically significant. In summary, there is no meaningful evidence that taking CMPSC 9 or CMPSC 16 has a significant impact on students’ self-rated programming proficiency or comfort level.</p>
+<p>Question 3: Do people who have done research have more or less domains of interest compared to people who have not done research?</p>
+<p>In order to investigate this question, we first started by combining the background and interests datasets and filtering for students that marked ‘Yes’ and ‘No’ for whether they had research experience. After, we calculated summary statistics on these two groups, particularly, the mean, variance, and n, of number of domains of interest, and got the following:</p>
+<div class="cell" data-hash="report_cache/html/unnamed-chunk-2_84f9d8fc09a1ec1af97c06776d6b434f">
 <div class="cell-output-display">
 <table class="table table-sm table-striped small">
+<caption>Summary statistics of Domains of Interest by research participation</caption>
 <thead>
 <tr class="header">
-<th style="text-align: left;">animal</th>
-<th style="text-align: left;">threatening</th>
+<th style="text-align: left;">Research_Participation</th>
+<th style="text-align: right;">Mean_Domains</th>
+<th style="text-align: right;">Variance_Domains</th>
+<th style="text-align: right;">N</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">snake</td>
-<td style="text-align: left;">TRUE</td>
+<td style="text-align: left;">Participated</td>
+<td style="text-align: right;">3.843750</td>
+<td style="text-align: right;">2.587702</td>
+<td style="text-align: right;">32</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">gecko</td>
-<td style="text-align: left;">FALSE</td>
+<td style="text-align: left;">Did not participate</td>
+<td style="text-align: right;">3.647059</td>
+<td style="text-align: right;">1.617647</td>
+<td style="text-align: right;">17</td>
 </tr>
 </tbody>
 </table>
 </div>
 </div>
-</section>
-<section id="figures" class="level3">
-<h3 class="anchored" data-anchor-id="figures">Figures</h3>
-<p>To include any figures not generated by code chunks, use <em>Insert &gt; Figure / Image</em> or <code>![CAPTION](path/file.ext)</code> .</p>
-<p>Most of the time code chunks producing plots will render fine. However, to adjust sizing or alignment, use the chunk options <code>fig-width</code> and <code>fig-height</code> . Captions can be added with <code>fig-cap</code> .</p>
-<div class="cell" data-layout-align="left" data-hash="report_cache/html/unnamed-chunk-4_24a9f790de60f53c895719545e4e7cb7">
+<p>To further get a better idea of the two distributions, we plotted bar charts of the domains of interest:</p>
+<div class="cell" data-hash="report_cache/html/unnamed-chunk-3_8674a9eeecf1ff5f164acefb44566370">
 <div class="cell-output-display">
-<div class="quarto-figure quarto-figure-left">
-<figure class="figure">
-<p><img src="report_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="384"></p>
-<figcaption class="figure-caption">A terrible plot.</figcaption>
-</figure>
+<p><img src="report_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid" width="672"></p>
+</div>
+<div class="cell-output-display">
+<p><img src="report_files/figure-html/unnamed-chunk-3-2.png" class="img-fluid" width="672"></p>
 </div>
 </div>
+<p>We found that the mean number of domains of interest between students who have participated in research versus those who have not are similar in value, with the variance of the research group being higher. This higher variance could stem from the fact that there are more individuals who had done research (around double). Additionally, looking at the two distributions, those who had done research had more of a bell shaped curve, skewed to the right, with a peak at 3 domains of interest. On the other hand, those who had not done research had almost a ‘uniform’ distribution, with equal number of students choosing 2, 3, 4, and 5 domains of interest.</p>
+<p>Lastly, we conducted a t-test to see if there was a statistically significant difference between the two means of domains of interest.</p>
+<div class="cell" data-hash="report_cache/html/unnamed-chunk-4_45a657a4e965627f68d1f6b54300ebfd">
+<div class="cell-output-display">
+<table class="table table-sm table-striped small">
+<caption>T-test Results</caption>
+<colgroup>
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 7%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 21%">
+<col style="width: 10%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: right;">estimate</th>
+<th style="text-align: right;">estimate1</th>
+<th style="text-align: right;">estimate2</th>
+<th style="text-align: right;">statistic</th>
+<th style="text-align: right;">p.value</th>
+<th style="text-align: right;">parameter</th>
+<th style="text-align: right;">conf.low</th>
+<th style="text-align: right;">conf.high</th>
+<th style="text-align: left;">method</th>
+<th style="text-align: left;">alternative</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">0.197</td>
+<td style="text-align: right;">3.844</td>
+<td style="text-align: right;">3.647</td>
+<td style="text-align: right;">0.469</td>
+<td style="text-align: right;">0.642</td>
+<td style="text-align: right;">39.883</td>
+<td style="text-align: right;">-0.651</td>
+<td style="text-align: right;">1.045</td>
+<td style="text-align: left;">Welch Two Sample t-test</td>
+<td style="text-align: left;">two.sided</td>
+</tr>
+</tbody>
+</table>
 </div>
-</section>
-<section id="links" class="level3">
-<h3 class="anchored" data-anchor-id="links">Links</h3>
-<p>To include any hyperlinks, use <code>[display text](url)</code> .</p>
-</section>
+</div>
+<p>We got a p-value of 0.6418, which is greater than 0.05 (alpha level), thus we conclude there is no significant difference between the two means.&nbsp;</p>
+<p>In conclusion, we found that students who have participated in research have the same number of domains of interest compared to those who have not participated in research.</p>
 </section>
 
 </main>
