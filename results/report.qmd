@@ -37,8 +37,6 @@ We sought to understand the relationship between coursework and a student's prof
 
 ## Findings
 
-Summarize your results. Don't try to explain every step you took; focus instead on providing the main data analytic outputs -- tables and figures -- and explaining clearly what they show. Clarify any important decisions you made in obtaining them. You can display codes if you like but it is not necessary.
-
 Question 1: Is there a relationship between a student's neutrality or preference for a research project?
 
 To answer this question, we merged the two separate datasets of background and interest attributes. Our target variable was `projtype`, from the background dataset. We re encoded it into a binary response of 0 indicating an industry preference, and 1, indicating no preference or a preference for research.
@@ -108,3 +106,5 @@ For each dataset we found the correlation between the course taken and proficien
     -   ![](report_files/figure-html/cs9-comfplot.png)
 
 From our tests, we found no significant relationship between self rated programming proficiency and whether each course was taken or not. Both classes have very weak positive correlations with proficiency, and their p-values \> .05 indicated that the relationship is not significant. Additionally, both courses show weak correlations with self-rated programming comfort; CMPSC 16 exhibits a small positive relationship, while CMPSC 9 shows a slight negative relationship. However, all p-values exceed 0.05, indicating that none of these associations are statistically significant. In summary, there is no meaningful evidence that taking CMPSC 9 or CMPSC 16 has a significant impact on students’ self-rated programming proficiency or comfort level.
+
+Question 3: We found that the mean number of domains of interest between students who have participated in research versus those who have not are similar in value, with the variance of the research group being higher. This higher variance could stem from the fact that there are more individuals who had done research (around double). Additionally, looking at the two distributions, those who had done research had more of a bell shaped curve, skewed to the right, with a peak at 3 domains of interest. On the other hand, those who had not done research had almost a ‘uniform’ distribution, with equal number of students choosing 2, 3, 4, and 5 domains of interest. Lastly, we conducted a t-test to see if there was a statistically significant difference between the two means of domains of interest. We got a p-value of 0.6418, which is greater than 0.05 (alpha level), thus we conclude there is no significant difference between the two means. 
