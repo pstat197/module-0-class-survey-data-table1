@@ -45,25 +45,25 @@ Since we were dealing with categorical variables, we created contingency table f
 
 Finally, we printed the subset of variables that had a p-value of \< 0.05 (which indicated a significant association with a preference for research vs industry). This is the table we acquired:
 
-![](images/Screenshot 2025-10-19 at 3.57.11 PM.png)
+![](images/q1pval.png)
 
 The `type` variable from the interest dataset was not available in the metadata, with the target variable projtype being the only seemingly related one. type originated from the interest dataset, and had responses of "both, ind and lab". These seemingly correspond to the responses for `projtype`, so we believed it was fair to assume that `type` is a duplicate variable of `projtype`. Thus, we proceeded by analyzing the variables `updv.num` and `lang`.
 
 The more significant of the two was `updv.num` (which corresponds to the amount of upper division PSTAT classes students have taken). We created another frequency table in order to see which responses to the number of upper division classes taken question corresponded to a preference/indifference towards research.
 
-![](images/Screenshot 2025-10-19 at 4.26.33 PM.png)
+![](images/updivfreq.png)
 
-![](images/PNG image.png){width="488"}
+![](images/PNG%20image.png){width="488"}
 
 These results must also be considered with the frequency of each response for `updv.num`, displayed in the table below:
 
-![](images/Screenshot 2025-10-19 at 4.36.36 PM.png){width="636"}
+![](images/numupdiv.png)
 
 Due to largely varying sample sizes above, It's difficult to draw conclusions by examining the frequency table/bar chart for classes taken and research preference.
 
 The second most significant variable was `lang` (corresponding to which programming language the student prefers). We created another frequency table in order to see which responses to the preffered languages question corresponded to a preference for research or not.
 
-![](images/Screenshot 2025-10-19 at 4.57.50 PM.png){width="794"}
+![](images/langfreq.png)
 
 `lang` had slightly more uniform sample sizes, allowing us to ultimately conclude that students who prefer R prefer/are indifferent to research projects.
 
@@ -98,7 +98,7 @@ For each dataset we found the correlation between the course taken and proficien
     -   ![](report_files/figure-html/cs16-comfplot.png)
 
 -   Dataset 4: CMPSC 9, prog.comf
-    
+
     -   Correlation coefficient: -0.17
 
     -   P-Value of Chi-Squared Test: .99
