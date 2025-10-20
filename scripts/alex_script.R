@@ -50,4 +50,21 @@ tbl <- table(
 )
 print(prop.table(tbl, margin = 1))
 
+tbl <- table(merged_data$updv.num,
+             merged_data$do_you_have_any_preference_regarding_working_on_an_industry_project_or_a_research_lab_project)
+chisq.test(tbl)
+cat("\n=== Preference distribution by amount Upper Division classes ===\n")
+prop.table(tbl, margin = 1)
+
+barplot(prop.table(table(merged_data$updv.num,
+                         merged_data$do_you_have_any_preference_regarding_working_on_an_industry_project_or_a_research_lab_project),
+                   margin = 1)[,2],
+        names.arg = c("0-2","3-5","6-8","9+"),
+        ylab = "Proportion choosing Research",
+        main = "Research Preference by Upper-Div Range")
+
+#With limited data, report that students with few upper-division courses tend to prefer research projects, while those with 
+#moderate coursework lean toward industry; highly experienced students are split.
+
+
 
