@@ -5,6 +5,7 @@
 library(readr)
 library(dplyr)
 library(tidyverse)
+library(ggplot2)
 
 
 background <- read_csv('data/background-clean.csv')
@@ -55,7 +56,7 @@ new_merge_df %>%
 ct <- table(new_merge_df$rsrch, new_merge_df$comfortable)
 prop.test(ct)
 
-'''
+'
 output shows p-value = 1, prop 1 estimate = 0.3529412, 
 prop 2 estimate = 0.3125000, 95% CI: -0.278 to 0.359.
 
@@ -79,4 +80,19 @@ as 1 tells us that variation in the two groups is fairly likely
 due to random chance. Finally, the confidence interval of -0.278
 to 0.359 includes 0, also confirming that there is no meaningful
 difference. Therefore, we fail to reject the null hypothesis.
-'''
+'
+
+# visualization
+
+new_merge_df %>%
+  group_by(rsrch) %>% 
+  summarize(prop_comfortable = mean(comfortable)) %>% 
+  ggplot(aes(x=rsrch, y=prop_comfortable, fill=rsrch)) +
+  geom_col() +
+  scale_y_continuous(labels = scales::percent_format()) +
+              labs(
+                title = 'proportion of students comfortable with programming',
+                x = 'research experience',
+                y = 'proportion') +
+  theme_minimal()
+
