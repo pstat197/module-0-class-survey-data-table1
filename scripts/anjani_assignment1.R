@@ -49,4 +49,34 @@ new_merge_df %>%
 # gives us a proportion of students in each group feel comfortable
 ## with programming
 
+# two-sample proportion test to see if difference is
+## statistically significant
 
+ct <- table(new_merge_df$rsrch, new_merge_df$comfortable)
+prop.test(ct)
+
+'''
+output shows p-value = 1, prop 1 estimate = 0.3529412, 
+prop 2 estimate = 0.3125000, 95% CI: -0.278 to 0.359.
+
+Interpretation: This analysis intended to determine whether there
+was a statistically significant difference between how
+comfortable PSTAT 197A students are with programming
+depending on whether they have prior experience with 
+#research (rsrch = TRUE) or not (rsrch = FALSE). I defined comfortable to mean self-reported
+scores of either a 4 or 5 in the category.
+
+H_0: There is no difference in programming comfort between students with
+and without research experience.
+
+From the above output, we can see that there was 
+a very small overall difference in proportions for this statistic,
+with about 35.29% of researchers feeling comfortable with programming
+vs. 31.25% for those who havent done research. Additionally,
+the p-value of 1 (a > 0.05) tells us that there is no statistically
+significant difference between the populations. A p-value being as high
+as 1 tells us that variation in the two groups is fairly likely 
+due to random chance. Finally, the confidence interval of -0.278
+to 0.359 includes 0, also confirming that there is no meaningful
+difference. Therefore, we fail to reject the null hypothesis.
+'''
