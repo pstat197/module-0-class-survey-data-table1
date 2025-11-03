@@ -36,7 +36,35 @@ For the third question, we found that students who participated in research and 
 
 ## Data description
 
-The dataset was obtained from a survey that all 2025 Fall Quarter PSTAT 197A students completed. Personal identifying information was removed to ensure anonymity. Students were asked about classes they took, whether they have done research, what year they were, what preference for projects they have, etc. Students were informed that this data would be used by the class, and had the option to opt out of being in the dataset.
+The dataset was obtained from a survey that all 2025 Fall Quarter PSTAT 197A students completed. Students were informed that this data would be used by the class for analysis and had the option to opt out of being in the dataset. Sixty students were surveyed, and fifty-two consented to have their data examined in the Module 0 project. Personal identifying information that were collected but not included in the dataset (removed to protect privacy) were time of submission, perm number, major(s), minor(s), standing, gender, race, goals for the project, and comments on research experience.
+
+
+For each student, their self-rated programming, math, and statistics proficiency and comfort were recorded.
+
+- Students had the option to rate their proficiency on a scale of beginner, intermediate, or advanced.
+
+- Students had the option to rate their comfort from 1 to 5 (1 being the least comfortable).
+
+Additionally, the dataset includes:
+
+- Student’s number of upper-division courses taken (which can be either 0–2, 3–5, 6–8, or 9+).
+
+- Whether they have a special domain of interest (yes, no, or unsure).
+
+- Whether they have a preference for working on an industry project, a lab project, or no preference.
+
+- Whether they have taken the following courses (1 for yes, 0 for no): 
+
+  - PSTAT: 100, 115, 120, 122, 126, 127, 131, 134, 160, 174
+  
+  - CS: 5, 9, 16, 130
+  
+  - LING: 104, 110, 111
+
+- Whether they have done research (true or false).
+
+- Preferred coding language: Python, R, or No preference.
+
 
 ## Questions of interest
 
