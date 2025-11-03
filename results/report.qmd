@@ -26,7 +26,14 @@ library(broom)
 
 ## Executive summary
 
-We took the data from the PSTAT 197A capstone survey and sought to find if there were any correlations and connections in the data that may help us better understand the students taking the capstone. We used R to do our data analysis and came up with guiding questions that directed our research. Our findings are summarized in this document.
+We took the data from the PSTAT 197A capstone survey to explore any relationships or patterns that could help us better understand the students taking the capstone. Using statistical methods and R, we analyzed three research questions surrounding students’ project preferences, coding proficiency/comfortability, and research experience.
+
+For the first analysis we found [..].
+
+For the second, we examined whether taking CMPSC 9 or CMPSC 16 was related to students' self rated coding proficiency and comfortability. We found no statistical relationship between courses taken and either proficiency or comfortability. The correlation coefficients were near zero, and all p-values exceeded .05, suggesting no meaningful relationship between the class taken or coding ability.
+
+For the third question, we found that students who participated in research and those who did not showed similar average numbers of domains of interest, with no statistically significant difference between their means (p = 0.6418). However, the research group exhibited greater variability and a more right-skewed, bell-shaped distribution with a peak at 3, while the non-research group exhibited a more uniform distribution.
+
 
 ## Data description
 
