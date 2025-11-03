@@ -84,7 +84,7 @@ For each dataset we found the correlation between the course taken and proficien
 
     -   P-Value of Chi-Squared Test: .34
 
-    -   ![]()![](report_files/figure-html/progprofcs16.png)![]()
+    -   ![](report_files/figure-html/progprofcs16.png)
 
 -   Dataset 2: CMPSC 9, prog.prof
 
