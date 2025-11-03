@@ -28,12 +28,11 @@ library(broom)
 
 We took the data from the PSTAT 197A capstone survey to explore any relationships or patterns that could help us better understand the students taking the capstone. Using statistical methods and R, we analyzed three research questions surrounding students’ project preferences, coding proficiency/comfortability, and research experience.
 
-For the first analysis we found [..].
+For the first analysis we examined if there were any factors that made students more likely to be indifferent towards/prefer a research capstone project. By examining p-values derived from chi-squared tests/ Fisher's exact type between our target variable (`projtype`) and each other variable, we found two plausible candidates, `updv.num` and `lang`. We wanted to know which specific responses were correlated to an indifference/preference for research, and ultimately found that the factor most contributing to a student's preference/indifference for reseatch was a student's who preference for R.
 
 For the second, we examined whether taking CMPSC 9 or CMPSC 16 was related to students' self rated coding proficiency and comfortability. We found no statistical relationship between courses taken and either proficiency or comfortability. The correlation coefficients were near zero, and all p-values exceeded .05, suggesting no meaningful relationship between the class taken or coding ability.
 
 For the third question, we found that students who participated in research and those who did not showed similar average numbers of domains of interest, with no statistically significant difference between their means (p = 0.6418). However, the research group exhibited greater variability and a more right-skewed, bell-shaped distribution with a peak at 3, while the non-research group exhibited a more uniform distribution.
-
 
 ## Data description
 
@@ -74,6 +73,8 @@ These results must also be considered with the frequency of each response for `u
 Due to largely varying sample sizes above, It's difficult to draw conclusions by examining the frequency table/bar chart for classes taken and research preference.
 
 The second most significant variable was `lang` (corresponding to which programming language the student prefers). We created another frequency table in order to see which responses to the preffered languages question corresponded to a preference for research or not.
+
+Language Response Frequency Table:
 
 ![](images/langfreq.png)
 
@@ -118,7 +119,6 @@ For each dataset we found the correlation between the course taken and proficien
     -   ![](report_files/figure-html/cs9-comfplot.png)
 
 From our tests, we found no significant relationship between self rated programming proficiency and whether each course was taken or not. Both classes have very weak positive correlations with proficiency, and their p-values \> .05 indicated that the relationship is not significant. Additionally, both courses show weak correlations with self-rated programming comfort; CMPSC 16 exhibits a small positive relationship, while CMPSC 9 shows a slight negative relationship. However, all p-values exceed 0.05, indicating that none of these associations are statistically significant. In summary, there is no meaningful evidence that taking CMPSC 9 or CMPSC 16 has a significant impact on students’ self-rated programming proficiency or comfort level.
-
 
 Question 3: Do people who have done research have more or less domains of interest compared to people who have not done research?
 
